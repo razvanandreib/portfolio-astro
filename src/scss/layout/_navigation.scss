@@ -1,0 +1,36 @@
+@use "src/scss/abstracts" as *;
+
+header {
+  width: 100%;
+}
+.navbar {
+  max-width: 144rem;
+  background-color: $white;
+  @include flex-h-center;
+  @include margin-center;
+  padding: 1.6rem 4rem 1.6rem 4rem;
+  box-shadow: 1px 1px 5px 1px rgba(204, 204, 204, 0.651);
+
+  &__logo {
+    margin-left: 4rem;
+    > img {
+      width: 15%;
+    }
+  }
+
+  &__links {
+    margin: 0 2% 0 auto;
+    > a {
+      font-family: $primary-font;
+      font-size: 1.5rem;
+      color: black;
+      text-decoration: none;
+      letter-spacing: 0.02rem;
+      margin: 2rem;
+      font-weight: 500;
+    }
+    > a:hover {
+      @include border-bot-hover;
+    }
+  }
+}

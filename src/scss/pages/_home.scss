@@ -1,0 +1,20 @@
+@use "../abstracts" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Cabin&display=swap");
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0 auto;
+  background-color: $back-color;
+}

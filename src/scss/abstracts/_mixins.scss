@@ -1,0 +1,23 @@
+@mixin flex-h-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-v-center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin margin-center {
+  margin: 0 auto;
+}
+
+@mixin border-bot-hover {
+  border-bottom: 1px solid rgba(70, 70, 70, 0.671);
+}
