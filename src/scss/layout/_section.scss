@@ -1,0 +1,82 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.section-container {
+  max-width: 144rem;
+  padding: 4rem;
+  margin: 0 auto;
+  .section-text {
+    margin-left: 3%;
+    > h2 {
+      font-size: 2.5rem;
+      margin: 2rem 0 2rem 0;
+    }
+    > p {
+      font-size: 2rem;
+    }
+  }
+  .section-project {
+    @include flex-h-center;
+    justify-content: space-evenly;
+    gap: 3%;
+    margin-top: 8rem;
+
+    > hr {
+      border: 0;
+      height: 1px;
+      background: #333;
+    }
+  }
+
+  &__more {
+    text-align: center;
+    margin: 10rem 0 10rem 0;
+    font-size: 2rem;
+    font-weight: 500;
+    > a {
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+    }
+    > a:hover {
+      @include border-bot-hover;
+    }
+  }
+}
+
+.contact-me {
+  @include margin-center;
+  background-color: $white;
+  max-width: 144rem;
+  text-align: center;
+  font-size: 2rem;
+  margin: 5rem auto 5rem auto;
+  padding: 6rem 4rem 4rem 4rem;
+  > a {
+    text-decoration: none;
+  }
+  &__img {
+    height: 20rem;
+    width: 100%;
+    background-image: url("/dist/images/contact-me.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  > p {
+    margin: 4rem 0;
+  }
+
+  &__social {
+    margin: 2rem 0;
+    > a {
+      > img {
+        width: 4rem;
+        border-bottom: 1px solid transparent;
+      }
+      > img:hover {
+        @include border-bot-hover;
+      }
+    }
+  }
+}

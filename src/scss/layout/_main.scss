@@ -1,0 +1,96 @@
+@use "../abstracts" as *;
+
+main {
+  @include margin-center;
+  background-color: $white;
+  margin-top: 4rem;
+  padding: 4rem;
+  max-width: 144rem;
+
+  .main__title {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 3% 0 3%;
+    position: relative;
+    > h2 {
+      position: absolute;
+      font-size: 3.5rem;
+      font-weight: 200;
+    }
+
+    > p {
+      font-size: clamp(2rem, 1.4483rem + 1.7241vw, 3rem);
+      margin: auto 0rem 0 auto;
+      padding: 0 1rem 0 0;
+      // width: 50vw;
+      // max-width: 40%;
+    }
+    p::before {
+      content: "";
+      padding-left: 20%;
+    }
+
+    &--image {
+      height: 15rem;
+      width: 100%;
+      max-width: 15rem;
+      background-image: url("/public/assets/images/profile-pic.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .main__line {
+    @include flex-h-center;
+    margin: 1rem 3% 0 3%;
+
+    > hr {
+      width: 94%;
+      border: 0;
+      height: 1px;
+      background: #333;
+      // background-image: linear-gradient(to right, #ccc, #333, #ccc);
+    }
+
+    > hr:nth-of-type(2) {
+      width: 1.88%;
+    }
+    > a > img {
+      width: 2.2rem;
+      margin: 0 0.5rem 0 0.5rem;
+      border-bottom: 1px solid transparent;
+    }
+
+    > a > img:hover {
+      @include border-bot-hover;
+    }
+  }
+}
+
+.main__info {
+  margin: 4rem 0 4rem 0;
+  &-text {
+    @include flex-h-center;
+    justify-content: space-around;
+    > p {
+      width: 100%;
+      max-width: 40%;
+      padding: 2rem;
+      font-size: 1.8rem;
+      letter-spacing: 0.02rem;
+      line-height: 2.1rem;
+    }
+  }
+  &-skills {
+    @include flex-center;
+    flex-direction: column;
+    font-size: clamp(1rem, 0.7793rem + 0.6897vw, 1.4rem);
+    > h3 {
+      margin: 3rem 0 1rem 0;
+    }
+    > ul {
+      list-style: none;
+    }
+  }
+}
