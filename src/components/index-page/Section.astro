@@ -1,8 +1,14 @@
 ---
+let names = {
+  imageHero :  "/public/assets/images/scanvet.jpeg"
+}
 
+const { greeting = 'Salut', name } = Astro.props;
 ---
 
-
+<div>
+    <h1>{greeting}, {name}!</h1>
+</div>
 
 <section class="section-container">
       <div class="section-text">
@@ -12,7 +18,7 @@
       <div class="section-project">
         <!-- Project Card start -->
         <div class="section-project__card">
-          <img src="./dist/images/hero.jpeg" alt="" />
+          <img src={names.imageHero} alt="" />
           <p>
             ScanVet a luat naștere din dorința de a aduce diversitate și
             calitate superioară a serviciilor în mediul clinicilor private.
