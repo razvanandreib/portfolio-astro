@@ -2,14 +2,14 @@
 
 header {
   width: 100%;
+  box-shadow: 1px 1px 5px 1px rgba(204, 204, 204, 0.651);
 }
 .navbar {
   max-width: 144rem;
   background-color: $white;
   @include flex-h-center;
   @include margin-center;
-  padding: 1.6rem 4rem 1.6rem 4rem;
-  box-shadow: 1px 1px 5px 1px rgba(204, 204, 204, 0.651);
+  padding: 1.2rem 4rem 1.2rem 4rem;
 
   &__logo {
     margin-left: 4rem;

@@ -2,10 +2,30 @@
 
 main {
   @include margin-center;
-  background-color: $white;
   margin-top: 4rem;
   padding: 4rem;
   max-width: 144rem;
+  background-color: $white;
+
+  > .main__name {
+    display: flex;
+    flex-direction: column;
+    margin-right: 3%;
+    > h2,
+    p {
+      align-self: flex-end;
+    }
+
+    > h2 {
+      font-size: 3.5rem;
+      font-weight: 400;
+    }
+
+    > p {
+      font-size: 2.1rem;
+      margin-top: 0.2rem;
+    }
+  }
 
   .main__title {
     display: flex;
@@ -64,33 +84,6 @@ main {
 
     > a > img:hover {
       @include border-bot-hover;
-    }
-  }
-}
-
-.main__info {
-  margin: 4rem 0 4rem 0;
-  &-text {
-    @include flex-h-center;
-    justify-content: space-around;
-    > p {
-      width: 100%;
-      max-width: 40%;
-      padding: 2rem;
-      font-size: 1.8rem;
-      letter-spacing: 0.02rem;
-      line-height: 2.1rem;
-    }
-  }
-  &-skills {
-    @include flex-center;
-    flex-direction: column;
-    font-size: clamp(1rem, 0.7793rem + 0.6897vw, 1.4rem);
-    > h3 {
-      margin: 3rem 0 1rem 0;
-    }
-    > ul {
-      list-style: none;
     }
   }
 }
