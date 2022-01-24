@@ -1,13 +1,4 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-.brand-container {
-  @include margin-center;
-  margin: 1rem 3% 0 3%;
-  padding: 4rem;
-  max-width: 144rem;
-  
-  > p {
-    color: $p-main-color;
-  }
-}
+
